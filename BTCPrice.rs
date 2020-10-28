@@ -20,7 +20,7 @@ fn prepare_impl(_input: Input) {
 #[no_mangle]
 fn execute_impl(input: Input) -> Output {
     let avg = ext::load_average::<u64>(1);
-	Output { price: (avg.unwrap() * input.multiplier as u64) as u64 }
+	Output { price: avg.unwrap() as u64 }
 }
 prepare_entry_point!(prepare_impl);
 execute_entry_point!(execute_impl);
