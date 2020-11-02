@@ -14,7 +14,7 @@ struct Output {
 #[no_mangle]
 fn prepare_impl(_input: Input) {
     // Coingecko price data source
-    oei::ask_external_data(1, 1, "".as_bytes());
+    oei::ask_external_data(2, 2, "".as_bytes());
 }
 
 #[no_mangle]
